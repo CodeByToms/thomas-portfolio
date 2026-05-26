@@ -178,7 +178,7 @@ function App() {
             📧 Email:
             <a href="mailto:thomasac@example.com">
               {" "}
-              thomasac114@gmail.com.com
+              thomasac114@gmail.com
             </a>
           </p>
 
