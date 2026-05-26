@@ -23,9 +23,9 @@ function App() {
       title: "Activity Point Management System",
       description:
         "A web application developed to automate student activity point management, certificate verification, approval tracking, and transparency.",
-        image: "/images/landing.png",
+      image: "/images/landing.png",
+      github: "https://github.com/CodeByToms",
     },
-
   ];
 
   const certificates = [
@@ -46,7 +46,7 @@ function App() {
       image: "/images/ai.png",
     },
     {
-      name: "CSS,Java script and Python Certificate",
+      name: "CSS, JavaScript and Python Certificate",
       image: "/images/css.png",
     },
   ];
@@ -62,7 +62,7 @@ function App() {
             <p>
               BTech Computer Science student passionate about Full Stack
               Development, Software Engineering, and Machine Learning.
-              Skilled in React, Node.js, Python, and FastAPI with hands-on
+              Skilled in React.js, Node.js, Python, and FastAPI with hands-on
               project experience.
             </p>
 
@@ -89,6 +89,7 @@ function App() {
             <img
               src="/images/profile.png"
               alt="Thomas AC"
+              className="profile-image"
             />
           </div>
         </div>
@@ -126,45 +127,86 @@ function App() {
         <div className="projects-container">
           {projects.map((project, index) => (
             <div className="project-card" key={index}>
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
               <img
-          src={project.image}
-          alt={project.name}
-        />
+                src={project.image}
+                alt={project.title}
+                className="project-image"
+              />
+
+              <h3>{project.title}</h3>
+
+              <p>{project.description}</p>
+
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noreferrer"
+                className="project-btn"
+              >
+                View Project
+              </a>
             </div>
           ))}
         </div>
       </section>
 
       {/* CERTIFICATES SECTION */}
-<section className="section">
-  <h2>Certificates</h2>
+      <section className="section">
+        <h2>Certificates</h2>
 
-  <div className="certificate-container">
-    {certificates.map((certificate, index) => (
-      <div className="certificate-card" key={index}>
-        <img
-          src={certificate.image}
-          alt={certificate.name}
-        />
+        <div className="certificate-container">
+          {certificates.map((certificate, index) => (
+            <div className="certificate-card" key={index}>
+              <img
+                src={certificate.image}
+                alt={certificate.name}
+                className="certificate-image"
+              />
 
-        <h3>{certificate.name}</h3>
-      </div>
-    ))}
-  </div>
-</section>
+              <h3>{certificate.name}</h3>
+            </div>
+          ))}
+        </div>
+      </section>
 
-{/* CONTACT SECTION */}
-<section className="section">
-  <h2>Contact me</h2>
+      {/* CONTACT SECTION */}
+      <section className="section">
+        <h2>Contact Me</h2>
 
-  <div className="contact-container">
-    <p>Email: thomasac@example.com</p>
+        <div className="contact-container">
+          <p>
+            📧 Email:
+            <a href="mailto:thomasac@example.com">
+              {" "}
+              thomasac114@gmail.com.com
+            </a>
+          </p>
 
+          <p>
+            💻 GitHub:
+            <a
+              href="https://github.com/CodeByToms"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {" "}
+              github.com/CodeByToms
+            </a>
+          </p>
 
-  </div>
-</section>
+          <p>
+            🔗 LinkedIn:
+            <a
+              href="https://www.linkedin.com/in/thomas-a-c/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {" "}
+              linkedin.com/in/thomas-a-c
+            </a>
+          </p>
+        </div>
+      </section>
     </div>
   );
 }
